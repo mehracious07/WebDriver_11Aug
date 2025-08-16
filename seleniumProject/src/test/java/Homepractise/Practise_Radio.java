@@ -1,0 +1,27 @@
+package Homepractise;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Practise_Radio {
+
+	public static void main(String[] args) throws InterruptedException {
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
+		Thread.sleep(1000);
+		List<WebElement>radio=driver.findElements(By.xpath("//input[@type='radio']"));
+//		radio.get(1).click();
+		int size=radio.size();
+		for(int i=0;i<size;i++) {
+			radio.get(i).click();
+			Thread.sleep(1000);
+		}
+		
+
+	}
+
+}

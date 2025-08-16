@@ -1,0 +1,58 @@
+package August06;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+/*
+ * Launch chrome Browser
+ * Open URL "https://demo.opencart.com/"
+ * Validate title should be "Your Store"
+ * close Browser
+ * */
+public class Day1 {
+
+	public static void main(String[] args) {
+//Launch Browser(chrome)
+//ChromeDriver driver = new ChromeDriver();
+		WebDriver driver=new ChromeDriver();
+		
+//	Open URL "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+
+//Validate title should be "Your Store"
+
+String act_title=driver.getTitle();
+
+if(act_title.equals("OrangeHRM")) {
+	System.out.print("Title is Matched");
+}else {
+	//Browser Exit 
+	System.out.print("Title is Mismatched");
+	driver.close();
+}
+
+driver.manage().window().maximize();
+
+
+//name Locator
+try {
+	
+	driver.findElement(By.name("username")).sendKeys("Admin");
+	driver.findElement(By.name("password")).sendKeys("admin123");
+	driver.findElement(By.cssSelector(".orangehrm-login-button")).click();
+	try {
+        Thread.sleep(5000); // Let the dashboard load
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    }
+}catch(Exception e) {
+	e.getStackTrace();
+}
+
+String currURL=driver.getCurrentUrl();
+
+
+	}
+
+}

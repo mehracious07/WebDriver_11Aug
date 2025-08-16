@@ -1,0 +1,27 @@
+package August14;
+
+import java.io.File;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class FileDownload {
+
+	public static void main(String[] args) throws InterruptedException {
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://the-internet.herokuapp.com/download");
+		Thread.sleep(2000);
+		driver.manage().window().maximize();
+		Thread.sleep(2000);
+driver.findElement(By.linkText("example.txt")).click();
+File f = new File("C:\\Users\\my pc\\Downloads\\example.txt");
+if(f.exists()) {
+	System.out.print("File is downloaded");
+}
+else {
+	System.out.print("File is not downloaded");
+}
+}
+
+}
