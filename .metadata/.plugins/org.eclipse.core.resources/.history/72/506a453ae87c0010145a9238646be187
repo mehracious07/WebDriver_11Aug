@@ -1,0 +1,39 @@
+package LabSession_August19;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
+
+	public class Assertions_Lab {
+	WebDriver driver ;
+
+	@Test(priority=1)
+	public void Login() {
+		driver= new ChromeDriver();
+		driver.get("https://practicetestautomation.com/practice-test-login/");
+		driver.findElement(By.xpath("//input[@id='username']")).sendKeys("student");
+		driver.findElement(By.xpath("//input[@id='password']")).sendKeys("Password123");
+		String Expectedurl = "https://practicetestautomation.com/logged-in-successfully/";
+		driver.findElement(By.xpath("//button[@id='submit']")).click();
+		Assert.assertEquals(driver.getCurrentUrl(),Expectedurl,"Login Sucessfull");
+	}
+
+
+	@Test(priority=2)
+	public void Invalid_Login() {
+		SoftAssert sa = new SoftAssert();
+		driver= new ChromeDriver();
+		driver.get("https://practicetestautomation.com/practice-test-login/");
+		driver.findElement(By.xpath("//input[@id='username']")).sendKeys("student123");
+		driver.findElement(By.xpath("//input[@id='password']")).sendKeys("Password123");
+		String Expectedurl = "https://practicetestautomation.com/logged-in-successfully/";
+		driver.findElement(By.xpath("//button[@id='submit']")).click();
+		sa.assertEquals(driver.getCurrentUrl(),Expectedurl,"Login Failed");
+		driver.quit();
+		sa.assertAll();
+	}
+	}
+

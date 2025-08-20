@@ -1,0 +1,29 @@
+package August16;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Window {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://the-internet.herokuapp.com/windows");
+		driver.manage().window().maximize();
+		String mainWindow = driver.getWindowHandle();
+		driver.findElement(By.xpath("//*[@id=\"content\"]/div/a")).click();
+	    // Get all window handles
+        Set<String> newWindow = driver.getWindowHandles();
+
+        // Convert Set to List so we can use indexing
+        List<String> newWindowsList = new ArrayList<String>(newWindow);
+
+		driver.switchTo().window(newWindowsList.get(0));
+	}
+
+}

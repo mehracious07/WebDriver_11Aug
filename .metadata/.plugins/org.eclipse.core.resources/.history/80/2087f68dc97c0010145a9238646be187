@@ -1,0 +1,17 @@
+package LabSession_August19;
+
+import org.testng.ITestListener;
+
+public class Lab_Listners implements ITestListener {
+
+	public void onTestStart() {
+	  System.out.println("Test Started");
+	}
+	public void onTestSucess() {
+		  System.out.println("Test SucessFull ");
+		}
+	public void onTestFailure() {
+		  System.out.println("Test Failed");
+		}
+	
+}

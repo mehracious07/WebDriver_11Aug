@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+  <test name="Test">
+  <parameter name="browser" value="Chrome"/>
+   <groups>
+    <run>
+    <include name="regression"/>
+    </run>
+    </groups> 
+    <classes>
+     <!--  <class name="LabSession_August17.Lab1"/>
+      <class name="LabSession_August17.Lab2"/>
+       <class name="LabSession_August17.Lab4"/> -->
+        <class name="LabSession_August17.Lab4TestNg">
+          <parameter name="url" value="https://www.demoblaze.com/index.html"/>
+          <methods>
+          <exclude name = "Quit"/>
+          </methods>
+        </class>
+    </classes>
+  </test> <!-- Test -->
+  
+  
+  <test name="Lab4Test">
+  <groups>
+  <run>
+  <include name="sanity"/>
+  </run>
+  </groups>
+  <classes>
+   <class name="LabSession_August17.Lab3">
+   </class>
+   </classes>
+  </test>
+  
+</suite> <!-- Suite -->

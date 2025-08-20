@@ -1,0 +1,7 @@
+package August16_testNG;
+
+public class Multiple_TestCases {
+	
+	void login()
+
+}

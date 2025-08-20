@@ -1,0 +1,33 @@
+package LabSession_August17;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeTest;
+
+public class Lab3 {
+
+	WebDriver driver;
+	
+	@BeforeTest
+	public void launchApp() {
+		driver = new ChromeDriver();
+		driver.get("https://practicetestautomation.com/practice-test-login/");
+	driver.manage().window().maximize();
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+	}
+	
+	public void ForValidCredentials() {
+		driver.findElement(By.xpath("//input[@id='username']")).sendKeys("student");
+		driver.findElement(By.xpath("//input[@id='password']")).sendKeys("Password123");
+		driver.findElement(By.xpath("//button[@id='submit']")).click();
+		String expectedUrl="https://practicetestautomation.com/logged-in-successfully/";
+		if(driver.getCurrentUrl()!=expectedUrl) {
+			System.out.println("Wrong Login Credentials");
+		}else {
+			System.out.println("SuccessFull Login");
+		}
+	}
+}

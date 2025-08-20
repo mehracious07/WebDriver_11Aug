@@ -1,0 +1,25 @@
+package LabSession_August17;
+
+import java.util.List;
+
+import org.junit.BeforeClass;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
+
+public class Lab2 {
+WebDriver driver;
+@BeforeClass
+public void LaunchApp() {
+	driver.get("https://phptravels.net/");
+	System.out.println("App launched");
+}
+
+@Test(priority=0)
+public void SelectTypeOfTrip() {
+	List<WebElement>e=driver.findElements(By.xpath("//select[@class='flight_way form-select form-select-sm px-3 rounded-2 border']"));
+e.get(1).click();
+}
+
+}

@@ -1,0 +1,52 @@
+package August19_testNG;
+
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+
+
+public class Annotations {
+	@BeforeTest
+	public void BeforeTest() {
+		System.out.println("Before Test");
+	}
+	@AfterTest
+	public void AfterTest() {
+		System.out.println("After Test");
+	}
+	
+	@BeforeClass
+	public void BeforeClass() {
+		System.out.println("Before Class");
+	}
+	
+	@Test
+	public void DisplayTest() {
+		System.out.println("Test");
+	}
+	@Test
+	public void DisplayTest1() {
+		System.out.println("Test2");
+	}
+	@AfterClass
+	public void AfterClass() {
+		System.out.println("After Class");
+	}
+	
+	@BeforeMethod
+	public void BeforeMethod() {
+		System.out.println("Before Method");
+	}
+	
+	@AfterMethod
+	public void AfterMethod() {
+		System.out.println("After Method");
+	}
+
+}

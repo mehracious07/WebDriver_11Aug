@@ -1,0 +1,37 @@
+package LabSession_August17;
+
+import java.time.Duration;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Lab4 {
+	public static void main(String[]args) {
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.demoblaze.com/index.html");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		
+		driver.findElement(By.xpath("//a[normalize-space()='Samsung galaxy s6']")).click();
+		driver.findElement(By.xpath("//a[normalize-space()='Add to cart']")).click();
+		driver.findElement(By.xpath("//a[@id='cartur']")).click();
+		driver.findElement(By.xpath("//button[normalize-space()='Place Order']")).click();
+		driver.findElement(By.xpath("//input[@id='name']")).sendKeys("Sanjay Singh Mehara");
+		driver.findElement(By.xpath("//input[@id='country']")).sendKeys("India");
+		driver.findElement(By.xpath("//input[@id='city']")).sendKeys("Haldwani");
+		driver.findElement(By.xpath("//input[@id='card']")).sendKeys("483245859833");
+		driver.findElement(By.xpath("//input[@id='month']")).sendKeys("July");
+		driver.findElement(By.xpath("//input[@id='year']")).sendKeys("2030");
+		
+		driver.findElement(By.xpath("//button[normalize-space()='Purchase']")).click();
+		
+		Alert a = driver.switchTo().alert();
+		a.accept();
+		driver.close();
+		
+		
+	}
+
+}

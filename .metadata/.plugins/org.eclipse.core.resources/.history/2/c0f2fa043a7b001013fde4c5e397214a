@@ -1,0 +1,9 @@
+package August16_testNG;
+
+import org.testng.annotations.Test;
+
+public class MultipleTestCases {
+  @Test
+  public void f() {
+  }
+}
