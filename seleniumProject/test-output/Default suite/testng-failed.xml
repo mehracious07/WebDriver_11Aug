@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="August19_testNG.ExcelRead">
+      <class name="LabSession_August19.AllInOne">
         <methods>
-          <include name="login"/>
+          <include name="Login"/>
+          <include name="Close"/>
+          <include name="InValidLogin"/>
         </methods>
-      </class> <!-- August19_testNG.ExcelRead -->
+      </class> <!-- LabSession_August19.AllInOne -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

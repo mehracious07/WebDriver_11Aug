@@ -2,7 +2,9 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\my pc\Bdd"/>
 			<item value="C:\Users\my pc\OneDrive\Desktop"/>
+			<item value="C:\Users\my pc"/>
 			<item value="C:\Users\my pc\OneDrive\Desktop\Selenium"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -46,10 +48,16 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="BDD_Cucumber1"/>
+			<item value="BDDCucumber"/>
+			<item value="BDD"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="BDD_Cucumber1"/>
+			<item value="BDDCucumber"/>
+			<item value="BDD"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -64,7 +72,21 @@
 		</list>
 	</section>
 	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
 	</section>
 	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenRepositorySearchDialog">
+		<item key="width" value="480"/>
+		<item key="height" value="529"/>
+		<item key="x" value="443"/>
+		<item key="y" value="8"/>
 	</section>
 </section>
