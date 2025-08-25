@@ -3,7 +3,7 @@
 <suite name="Suite"  >
 
   <listeners>
-    <listener class-name="LabSession_August19.Lab_Listners"/>
+    <listener class-name="LabSession_August19.Assertions_Lab"/>
   </listeners>
   
   <test thread-count="5" name="Test">
