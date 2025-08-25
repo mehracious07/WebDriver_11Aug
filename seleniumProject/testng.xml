@@ -12,9 +12,9 @@
   <class name="August20.DataProviders"/> 
      <class name="LabSession_August18.Lab4"/> 
      <class name="LabSession_August19.ListnerTestCase"/> 
-         <class name="LabSession_August19.Assertions_Lab"/> 
-    --> 
      <class name="LabSession_August19.AllInOne"/> 
+    --> 
+         <class name="LabSession_August19.Assertions_Lab"/> 
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
