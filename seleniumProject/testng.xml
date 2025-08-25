@@ -8,11 +8,12 @@
   
   <test thread-count="5" name="Test">
     <classes>
+     <class name="LabSession_August18.Lab4"/> 
     <!--
      <class name="LabSession_August19.ListnerTestCase"/> 
          <class name="LabSession_August19.Assertions_Lab"/> 
-    --> 
      <class name="LabSession_August19.AllInOne"/> 
+    --> 
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
